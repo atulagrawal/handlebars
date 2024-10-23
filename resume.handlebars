@@ -5,30 +5,7 @@
 <html>
 {{/if}}
   <head>
-    {{#if resume.basics.name}}
-    <title>{{resume.basics.name}} - CV</title>
-    <meta property="og:site_name" content="{{resume.basics.name}}">
-    {{else}}
-    <title>CV</title>
-    {{/if}}
-
-    {{#if resume.basics.summary}}
-    <meta name="description" content="{{resume.basics.summary}}">
-    <meta property="og:description" content="{{resume.basics.summary}}">
-    {{/if}}
-
-    {{#if resume.basics.label}}
-    <meta property="og:title" content="{{resume.basics.label}}">
-    {{/if}}
-
-    {{#if resume.basics.image}}
-    <meta property="og:image" content="{{resume.basics.image}}">
-    <link rel="icon" href="{{resume.basics.image}}">
-    {{#if resume.basics.name}}
-    <meta property="og:image:alt" content="Avatar of {{resume.basics.name}}.">
-    {{/if}}
-    {{/if}}
-
+     {{> about }}
     {{#if resume.custom.xTwitterHandle}}
     <meta name="twitter:site" content="{{resume.custom.xTwitterHandle}}">
     {{/if}}
@@ -116,61 +93,7 @@
   </section>
   {{/resume.basics}}
 
-  {{#if resume.work.length}}
-  <section id="work">
-    <h2>Work Experience</h2>
-    {{#each resume.work}}
-    <div class="item">
-      {{#if name}}
-      <h3 class="work_name">
-        {{name}}
-      </h3>
-      {{else if company}}
-      <h3 class="work_name">
-        {{company}}
-      </h3>
-      {{/if}}
-
-      <div class="split">
-      {{#if position}}
-      <div class="work_position">
-        {{position}}
-      </div>
-      {{/if}}
-
-      <div class="work_date">
-        {{#if startDate}}
-        {{{date startDate}}} - {{{date endDate}}}
-        {{/if}}
-      </div>
-
-      {{#if url}}
-      <div class="work_website">
-        {{{link url}}}
-      </div>
-      {{else if website}}
-      <div class="work_website">
-        <a href="{{website}}">{{website}}</a>
-      </div>
-      {{/if}}
-      </div>
-
-      {{#if summary}}
-      <div class="summary">
-        <p>{{{markdown summary}}}</p>
-      </div>
-      {{/if}}
-      {{#if highlights.length}}
-      <ul class="highlights">
-        {{#each highlights}}
-        <li>{{{markdown .}}}</li>
-        {{/each}}
-      </ul>
-      {{/if}}
-    </div>
-    {{/each}}
-  </section>
-  {{/if}}
+ {{>work}}
 
   {{#if resume.volunteer.length}}
   <section id="volunteer">
@@ -229,60 +152,7 @@
   </section>
   {{/if}}
 
-  {{#if resume.education.length}}
-  <section id="education">
-    <h2>Education</h2>
-    {{#each resume.education}}
-    <div class="item">
-
-      <div class="split">
-      {{#if institution}}
-      <div class="institution">
-        {{institution}}
-      </div>
-      {{/if}}
-
-      <div class="study_date">
-        {{#if startDate}}
-        <span class="startDate">
-          {{{date startDate}}}
-        </span>
-        <span class="endDate">
-          - {{{date endDate}}}
-        </span>
-        {{/if}}
-      </div>
-
-      {{#if url}}
-      <div class="work_website">
-        {{{link url}}}
-      </div>
-      {{/if}}
-      </div>
-
-      {{#if qualification}}
-      <div class="qualification">
-        {{qualification}}
-      </div>
-      {{/if}}
-
-      {{#if courses.length}}
-      <ul class="courses">
-        {{#each courses}}
-        <li>{{.}}</li>
-        {{/each}}
-      </ul>
-      {{/if}}
-
-      {{#if dissertation}}
-      <div class="dissertation">
-        <span>Dissertation: </span>{{dissertation}}
-      </div>
-      {{/if}}
-    </div>
-    {{/each}}
-  </section>
-  {{/if}}
+ {{> education}}
 
   {{#if resume.skills.length}}
   <section id="skills">

@@ -4,32 +4,32 @@
     "language": "en"
   },
   "basics": {
-    "name": "Seth Falco",
-    "label": "Open-Sourcerer 🧙‍♂️",
-    "email": "seth@example.org",
-    "phone": "+00 0694201337",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla facilisi nullam.",
+    "name": "Atul Agrawal",
+    "label": "Solution Architect 🧙‍♂️",
+    "email": "atul@servicenow.com",
+    "phone": "+91 76XXXXXXXX",
+    "summary": "Passionate for software architecuture and design.",
     "location": {
-      "countryCode": "GB"
+      "countryCode": "IN"
     },
     "profiles": [
       {
         "network": "GitHub",
-        "username": "SethFalco",
-        "url": "https://github.com/SethFalco"
+        "username": "atulagrawal",
+        "url": "https://github.com/atulagrawal"
       },
       {
         "network": "LinkedIn",
-        "username": "sethfalco",
+        "username": "atulagrawal",
         "url": "https://www.linkedin.com/in/sethfalco/"
       }
     ]
   },
   "work": [
     {
-      "name": "JSON Resume",
-      "location": "Remote",
-      "position": "Open-Sourcerer 🧙‍♂️",
+      "name": "ServiceNow",
+      "location": "Hyderabad, India",
+      "position": "Solution Architect 🧙‍♂️",
       "url": "https://jsonresume.org/",
       "startDate": "2021-10",
       "summary": "Facilisis volutpat est velit egestas dui id ornare.",
@@ -56,15 +56,15 @@
   ],
   "education": [
     {
-      "institution": "freeCodeCamp",
-      "url": "https://www.freecodecamp.org/",
+      "institution": "National University of Singapore",
+      "url": "https://www.nus.com",
       "area": "Information Technology",
-      "studyType": "Community-Study"
+      "studyType": "Full Time"
     }
   ],
   "certificates": [
     {
-      "name": "edX Verified Certificate for Introduction to Web Accessibility",
+      "name": "ServiceNow Fundamentals",
       "date": "2023-04-17",
       "issuer": "edX"
     }
@@ -83,8 +83,8 @@
       "fluency": "Native"
     },
     {
-      "language": "French",
-      "fluency": "Elementary"
+      "language": "Hindi",
+      "fluency": "Native"
     }
   ]
 }

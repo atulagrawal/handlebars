@@ -1,0 +1,23 @@
+{{#if resume.basics.name}}
+    <title>{{resume.basics.name}} - Atul</title>
+    <meta property="og:site_name" content="{{resume.basics.name}}">
+    {{else}}
+    <title>CV</title>
+    {{/if}}
+
+    {{#if resume.basics.summary}}
+    <meta name="description" content="{{resume.basics.summary}}">
+    <meta property="og:description" content="{{resume.basics.summary}}">
+    {{/if}}
+
+    {{#if resume.basics.label}}
+    <meta property="og:title" content="{{resume.basics.label}}">
+    {{/if}}
+
+    {{#if resume.basics.image}}
+    <meta property="og:image" content="{{resume.basics.image}}">
+    <link rel="icon" href="{{resume.basics.image}}">
+    {{#if resume.basics.name}}
+    <meta property="og:image:alt" content="Avatar of {{resume.basics.name}}.">
+    {{/if}}
+{{/if}}

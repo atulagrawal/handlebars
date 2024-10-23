@@ -2,7 +2,26 @@ const fs = require("fs");
 const Handlebars = require("handlebars");
 const { marked } = require("marked");
 const { minify } = require('html-minifier');
+// const about = fs.readFileSync('./components/about.hbs').toString()
+// const education = fs.readFileSync('./components/education.hbs').toString()
+// const work = fs.readFileSync('./components/work.hbs').toString()
 
+var partialsDir = __dirname + '/components';
+console.log(partialsDir);
+
+var filenames = fs.readdirSync(partialsDir);
+
+filenames.forEach(function (filename) {
+  var matches = /^([^.]+).hbs$/.exec(filename);
+  if (!matches) {
+    return;
+  }
+  var name = matches[1];
+  var file = partialsDir + '/' + filename;
+  console.log("reading----->" + file);
+  var template = fs.readFileSync(file).toString();
+  Handlebars.registerPartial(name, template);
+});
 /**
  * Custom renderer for marked, namely to disable unwanted features.
  * We only want to allow basic inline elements, like links, bold, or inline-code.
@@ -75,6 +94,9 @@ Handlebars.registerHelper("link", (body) => {
   return `<a href="${body}">${host}</a>`;
 });
 
+// Handlebars.registerPartial('about', Handlebars.compile(about));
+// Handlebars.registerPartial('work',  Handlebars.compile(work));
+// Handlebars.registerPartial('education',  Handlebars.compile(education));
 /**
  * @param {Object} resume
  * @returns {string}
