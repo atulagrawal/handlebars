@@ -1,0 +1,56 @@
+  {{#if resume.volunteer.length}}
+  <section id="volunteer">
+    <h2>Volunteer</h2>
+    {{#each resume.volunteer}}
+    <div class="item">
+      {{#if organization}}
+      <h3 class="company">
+        {{organization}}
+      </h3>
+      {{/if}}
+
+      <div class="split">
+      {{#if position}}
+      <div class="work_position">
+        {{position}}
+      </div>
+      {{/if}}
+
+      <div class="work_date">
+        {{#if startDate}}
+        <span class="startDate">
+          {{{date startDate}}}
+        </span>
+        <span class="endDate">
+          - {{{date endDate}}}
+        </span>
+        {{/if}}
+      </div>
+
+      {{#if url}}
+      <div class="work_website">
+        {{{link url}}}
+      </div>
+      {{else if website}}
+      <div class="work_website">
+        <a href="{{website}}">{{website}}</a>
+      </div>
+      {{/if}}
+      </div>
+
+      {{#if summary}}
+      <div class="summary">
+        <p>{{{markdown summary}}}</p>
+      </div>
+      {{/if}}
+      {{#if highlights.length}}
+      <ul class="highlights">
+        {{#each highlights}}
+        <li>{{{markdown .}}}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+    {{/each}}
+  </section>
+  {{/if}}

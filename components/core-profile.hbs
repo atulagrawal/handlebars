@@ -1,0 +1,38 @@
+{{#resume.basics}}
+      <header>
+      <h1>{{name}}</h1>
+      {{#if label}}
+      <h2>{{label}}</h2>
+      {{/if}}
+      </header>
+
+      <div id="content" class="container">
+      <section id="basics">
+        <div class="contact">
+        <h3>Contact</h3>
+        <div class="split">
+        {{#if url}}
+        <div class="website">
+          <strong>Website</strong>
+
+          {{{link url}}}
+        </div>
+        {{else if website}}
+        <div class="website">
+          <strong>Website</strong>
+          <a href="{{website}}">{{website}}</a>
+        </div>
+        {{/if}}
+        {{> email}}
+        {{> phone}}
+        </div>
+        </div>
+        {{#if summary}}
+        <div class="summary">
+          <h3>About</h3>
+          <p>{{{markdown summary}}}</p>
+        </div>
+        {{/if}}
+        {{> profiles}}
+      </section>
+{{/resume.basics}}

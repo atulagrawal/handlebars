@@ -1,0 +1,24 @@
+{{#if resume.languages.length}}
+  <section id="languages">
+    <h2>Languages</h2>
+    <table>
+      <thead>
+        <tr>
+          {{#each resume.languages.[0]}}
+            <th>{{@key}}</th>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+        {{#each resume.languages}}
+          <tr>
+              <td>{{language}}</td>
+              <td>{{fluency}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+  {{/if}}
+
+

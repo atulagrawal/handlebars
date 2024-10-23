@@ -147,3 +147,16 @@ header h2 {
 @page :first {
   margin: 0;
 }
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid lightgrey;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 2px 4px;
+}

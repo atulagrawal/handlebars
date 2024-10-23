@@ -1,0 +1,26 @@
+{{#if profiles.length}}
+        <section id="profiles" class="split">
+          {{#each profiles}}
+          <div class="item">
+            {{#if network}}
+            <strong class="network">
+              {{network}}
+            </strong>
+            {{/if}}
+            <div class="username">
+              {{#if url}}
+              <a href="{{url}}">
+                {{#if username}}
+                  {{username}}
+                {{else}}
+                  {{url}}
+                {{/if}}
+              </a>
+              {{else}}
+              {{username}}
+              {{/if}}
+            </div>
+          </div>
+          {{/each}}
+        </section>
+{{/if}}
